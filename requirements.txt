@@ -1,0 +1,10 @@
+altair==4.2.2
+contextily==1.3.0
+folium==0.14.0
+geopandas==0.12.2
+matplotlib==3.7.0
+snowflake-connector-python==3.0.1
+snowflake-snowpark-python==1.5.1
+streamlit-folium==0.12.0
+snowflake-snowpark-python[pandas]
+streamlit==1.24.0
