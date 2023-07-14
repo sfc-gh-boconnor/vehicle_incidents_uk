@@ -213,7 +213,7 @@ with firetab1:
 
     firemap,table = st.columns(2)
     with firemap:
-        st_FIRE_data = folium_static(m2, width=700, height= 700)
+        st_FIRE_data = folium_static(m2, width=500, height= 700)
 
     with table:
             dfrad = RADIUS_firestation_agg(S_YEAR,FIRE_SERVICE,RF2)
