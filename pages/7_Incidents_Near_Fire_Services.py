@@ -379,7 +379,7 @@ with firetab3:
             @st.cache_data(max_entries=2)
             def predictions(choose_size, select_fire_station, age_of_driver,age_of_vehicle,engine_size,choose_model):
                 df = session.sql(sql)
-                df.write.mode("overwrite").save_as_table("predictions.predictions")
+                df.write.mode("overwrite").save_as_table("predictions.Casualty_Predictions")
             
                 return  print ('table written')
         
@@ -390,13 +390,13 @@ with firetab3:
 
             @st.cache_data(max_entries=2)
             def preddet(choose_size, select_fire_station, age_of_driver,age_of_vehicle,engine_size,choose_model):
-                df = session.table('predictions.predictions')
+                df = session.table('predictions.Casualty_Predictions')
                 return df.to_pandas()
 
 
             @st.cache_data(max_entries=2)
             def predict(choose_size, select_fire_station, age_of_driver,age_of_vehicle,engine_size,choose_model):
-                df = session.table('predictions.predictions')
+                df = session.table('predictions.Casualty_Predictions')
                 return df.group_by('H3INDEX','WKT').agg(F.sum('PREDICTION').alias('PREDICTION')).to_pandas()
 
             #for charts
