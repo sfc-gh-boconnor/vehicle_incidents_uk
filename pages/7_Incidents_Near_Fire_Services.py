@@ -437,7 +437,7 @@ with firetab3:
             st.metric(label = "Total Predicted Casualties", value=p2.PREDICTION.sum())
             colmap,coldata = st.columns(2)
             with colmap:
-                st_casualty_predictions = folium_static(m11, width=700, height= 700)
+                st_casualty_predictions = folium_static(m11, width=500, height= 700)
 
             with coldata:
                 coldata1, coldata2 = st.columns(2)
