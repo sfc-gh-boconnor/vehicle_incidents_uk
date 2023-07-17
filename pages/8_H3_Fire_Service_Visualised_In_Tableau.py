@@ -91,6 +91,7 @@ with st.sidebar:
 
 
 st.markdown('#### VEHICLE INCIDENTS WITHIN A FIRE SERVICE AREA - VISUALISED IN TABLEAU')
+st.markdown('###### Please select options from the side by and then click view report')
 
 if submitted:   
 
