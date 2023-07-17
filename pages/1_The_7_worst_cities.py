@@ -121,7 +121,7 @@ trail_coordinates = session.table("UK_Worst_Cities_To_Drive").sort('RANK').selec
 #add information to each point which includes tool tips
 
 for A in range (0,7):
-    R = array2()[A].RANK
+    
     html = f'''
     <body style="background-color:#F0F0F0;">
     <p style="font-family:verdana">
