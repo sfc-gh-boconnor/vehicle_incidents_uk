@@ -162,7 +162,7 @@ for A in range (0,7):
     <b>Rank: </b>{selected_row.iloc[0].RANK}<BR><BR>
     <img src="{images_journeys().iloc[selected_row.iloc[0].ID-1].URL}", width=100>
     <br><br><b>City:</b>
-    {selected_row.iloc[0].CITY}<BR><BR>
+    <BR><BR>
 
     <hr>
         
