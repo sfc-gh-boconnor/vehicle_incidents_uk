@@ -111,6 +111,7 @@ for A in range (0,7):
     <BR><BR>
     <b>Rank: </b>{retrieve_worst_cities().RANK.iloc[A]}<BR><BR>
     <img src="{images_journeys().iloc[A].URL}", width=100>
+    {images_journeys().iloc[A].URL}
     <br><br><b>City:</b>
     {retrieve_worst_cities().CITY.iloc[A]}<BR><BR>
 
@@ -187,7 +188,7 @@ for A in range (0,7):
     <p style="font-family:verdana">
     <b>Worst Junction: </b>{selected_row['Bad Junction in City'].iloc[0]} 
     <BR><BR>
-    <b>Source:</b><a href ="{selected_row.SOURCE.iloc[0]}" target="popup"> {selected_row.SOURCE.iloc[0]}</a></p>
+    <b>Source:</b><a href ="{selected_row.SOURCE.iloc[0]}" target="popup"> "{selected_row.SOURCE.iloc[0]}"</a></p>
     <hr>
     <p style="font-family:verdana">
     <br>
