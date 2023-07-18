@@ -39,8 +39,6 @@ session = get_db_session()
 
 
 
-
-
 #bring in a database table from snowflake using a snowpark dataframe
 
 @st.cache_data
@@ -53,12 +51,12 @@ def worst_cities():
 
 
 #there are some icons i wish to cache - in this case i will be utilising the snowflake icon
-@st.cache_data
+@st.cache_data(ttl=3600)
 def images_icons():
     return session.sql('''SELECT  *, GET_PRESIGNED_URL(@ICONS,RELATIVE_PATH,172800) URL FROM directory(@ICONS) ORDER BY RELATIVE_PATH''').to_pandas()
 
 #there are some pictures of vehicle locations for worst places to drive - used snowpark to locate the URLs in the database and then cached the results to memory
-@st.cache_data
+@st.cache_data(ttl=3600)
 def images_journeys():
     return session.sql('''SELECT  *, GET_PRESIGNED_URL(@IMAGES,RELATIVE_PATH,172800) URL FROM directory(@IMAGES) ORDER BY RELATIVE_PATH''').to_pandas()
 
@@ -111,7 +109,6 @@ for A in range (0,7):
     <BR><BR>
     <b>Rank: </b>{retrieve_worst_cities().RANK.iloc[A]}<BR><BR>
     <img src="{images_journeys().iloc[A].URL}", width=100>
-    
     <br><br><b>City:</b>
     {retrieve_worst_cities().CITY.iloc[A]}<BR><BR>
 
@@ -162,7 +159,7 @@ for A in range (0,7):
     <b>Rank: </b>{selected_row.iloc[0].RANK}<BR><BR>
     <img src="{images_journeys().iloc[selected_row.iloc[0].ID-1].URL}", width=100>
     <br><br><b>City:</b>
-    <BR><BR>
+    {selected_row.iloc[0].CITY}<BR><BR>
 
     <hr>
         
