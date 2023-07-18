@@ -111,7 +111,7 @@ for A in range (0,7):
     <BR><BR>
     <b>Rank: </b>{retrieve_worst_cities().RANK.iloc[A]}<BR><BR>
     <img src="{images_journeys().iloc[A].URL}", width=100>
-    {images_journeys().iloc[A].URL}
+    
     <br><br><b>City:</b>
     {retrieve_worst_cities().CITY.iloc[A]}<BR><BR>
 
