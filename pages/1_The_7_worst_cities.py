@@ -27,7 +27,7 @@ def get_db_session():
     'ACCOUNT': st.secrets["account"],
     'user': st.secrets["username"],
     'password': st.secrets["password"],
-    'database': st.secrets["VEHICLE_ACCIDENTS_PRODUCTION"],
+    'database': st.secrets["database"],
     'warehouse': 'STREAMLIT',
     'role': st.secrets["role"],
     'schema': 'RAW'
