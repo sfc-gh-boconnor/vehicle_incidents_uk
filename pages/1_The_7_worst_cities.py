@@ -188,7 +188,7 @@ for A in range (0,7):
     <p style="font-family:verdana">
     <b>Worst Junction: </b>{selected_row['Bad Junction in City'].iloc[0]} 
     <BR><BR>
-    <b>Source:</b><a href ="{selected_row.SOURCE.iloc[0]}" target="popup"> "{selected_row.SOURCE.iloc[0]}"</a></p>
+    <b>Source:</b><a href ="{selected_row.SOURCE.iloc[0]}" target="popup"> {selected_row.SOURCE.iloc[0]}</a></p>
     <hr>
     <p style="font-family:verdana">
     <br>
@@ -207,7 +207,7 @@ for A in range (0,7):
     popup = folium.Popup(iframe,max_width=700)
     popup2 = folium.Popup(iframe2,max_width=700)
     folium.Marker(retrieve_worst_cities()[['LATITUDE', 'LONGITUDE']].iloc[A].to_numpy(),popup=popup, icon=folium.Icon(color='blue', prefix='fa',icon='car'), icon_size=(40,40)).add_to(m)
-    folium.Marker(selected_row[['LATITUDE', 'LONGITUDE']].iloc[0],popup=popup2, icon=folium.Icon(color='red', prefix='fa',icon=f'{retrieve_worst_cities()[retrieve_worst_cities()["CITY"] == selected].RANK.iloc[0]}'), icon_size=(40, 40)).add_to(m)
+    folium.Marker(selected_row[['LATITUDE', 'LONGITUDE']].iloc[0],popup=popup2, icon=folium.Icon(color='red', prefix='fa',icon=f'{selected_row.RANK.iloc[0]}'), icon_size=(40, 40)).add_to(m)
     
     
     
