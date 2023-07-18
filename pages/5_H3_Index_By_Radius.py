@@ -70,16 +70,6 @@ def retrieve_worst_cities():
     return session.table("UK_Worst_Cities_To_Drive").sort(F.col('RANK').asc()).to_pandas()
 
 
-#cache the co ordinates of the locations in order they were ranked
-@st.cache_data
-def array():
-    return session.table("UK_Worst_Cities_To_Drive").sort('RANK').select('LATITUDE','LONGITUDE').to_pandas().to_numpy()
-
-#cache the ranked data by collecting the results from snowpark data frame
-@st.cache_data
-def array2():
-    return session.table("UK_Worst_Cities_To_Drive").sort('RANK').collect()
-
 #caching the ICB geometries utilising snowpark data frame
 @st.cache_data
 def ICB():
