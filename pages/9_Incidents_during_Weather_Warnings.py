@@ -116,7 +116,7 @@ def mod_date_list(input_1,input_2):
 
 #df.filter(F.col('"Modified Date"') == max_mod_date)
 with st.sidebar:
-    st.image( Image.open('streamlit/pages/Met_Office.png'))
+    st.image( Image.open('pages/Met_Office.png'))
     
 
 
