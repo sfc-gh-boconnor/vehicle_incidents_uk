@@ -9,6 +9,7 @@ from datetime import datetime, timedelta
 from uuid import uuid4
 from jwt import encode
 import os,json
+from PIL import Image
 
 
 
@@ -16,6 +17,10 @@ import os,json
 ###Set the streamlit page layout
 st.set_page_config(layout="wide")
 
+#df.filter(F.col('"Modified Date"') == max_mod_date)
+with st.sidebar:
+    st.caption('weather warning data provided by:')
+    st.image( Image.open('pages/Met_Office.png'))
                 
 #a title for the streamlit app
 st.title("Weather Warnings in a HEX notebook")
