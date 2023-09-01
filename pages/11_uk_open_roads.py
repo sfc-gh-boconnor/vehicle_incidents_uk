@@ -58,7 +58,7 @@ def road_junction():
 #df.filter(F.col('"Modified Date"') == max_mod_date)
 with st.sidebar:
     
-    st.image( Image.open('streamlit/pages/os_logo.png'))
+    st.image( Image.open('pages/os_logo.png'))
     rclass = st.selectbox('select class: ',rclass(),index = 7)
     road = st.selectbox('select road: ',road(rclass))
     

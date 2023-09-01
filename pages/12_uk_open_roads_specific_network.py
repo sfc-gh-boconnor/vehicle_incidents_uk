@@ -72,7 +72,7 @@ def road_junction():
 #df.filter(F.col('"Modified Date"') == max_mod_date)
 with st.sidebar:
     
-    st.image( Image.open('streamlit/pages/os_logo.png'))
+    st.image( Image.open('pages/os_logo.png'))
     select_junction = st.selectbox('Junction',road_junction().select('JUNCTION_NUMBER').sort('JUNCTION_NUMBER').to_pandas())
     distance = st.slider(f'Distance in Metres',1,5000,500)
     S_YEAR = st.selectbox("Year for Vehicle Incidents",(accident_year_array()))
