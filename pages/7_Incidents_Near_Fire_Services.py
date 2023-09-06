@@ -310,7 +310,7 @@ with firetab3:
             ,VEHICLE_TYPE
             ,AGE_OF_VEHICLE * {age_of_vehicle}::INT
             ,AGE_OF_DRIVER * {age_of_driver}::INT
-            --,ENGINE_CAPACITY_CC * {engine_size}::INT
+            ,ENGINE_CAPACITY_CC * {engine_size}::INT
 
 
 
