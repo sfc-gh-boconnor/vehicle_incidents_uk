@@ -16,7 +16,8 @@ import os,json
 from PIL import Image
 import plotly.express as px
 
-
+###Set the streamlit page layout
+st.set_page_config(layout="wide")
 
 ###Create Connection to Snowflake
 @st.cache_resource(ttl=3600)
@@ -36,8 +37,7 @@ def get_db_session():
 
 session = get_db_session()
 
-###Set the streamlit page layout
-st.set_page_config(layout="wide")
+
 
 @st.cache_data
 def accident_year_array():
