@@ -36,6 +36,8 @@ def get_db_session():
 
 session = get_db_session()
 
+###Set the streamlit page layout
+st.set_page_config(layout="wide")
 
 st.title("UK OPEN ROADS PROVIDED BY OS")
 

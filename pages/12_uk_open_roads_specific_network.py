@@ -36,6 +36,9 @@ def get_db_session():
 
 session = get_db_session()
 
+###Set the streamlit page layout
+st.set_page_config(layout="wide")
+
 @st.cache_data
 def accident_year_array():
     accident_year_array = session.table('ACCIDENTS')\
