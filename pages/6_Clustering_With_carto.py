@@ -195,7 +195,7 @@ geodframe.crs = "EPSG:4326"
 geodframe.plot(column = geodframe.CLUSTER, cmap = 'viridis',alpha=0.7, legend=True, ax=ax, figsize=(9, 10))
 
         
-cx.add_basemap(ax, crs=geodframe.crs, source=cx.providers.Stamen.TonerLite, zoom=12)
+cx.add_basemap(ax, crs=geodframe.crs, source=cx.providers.OpenStreetMap.Mapnik, zoom=12)
        
 
        

@@ -207,7 +207,7 @@ with col21:
     geodframe.plot(column = measure, cmap = 'Blues_r',alpha=0.7,ax=ax, figsize=(9, 10))
 
 
-    cx.add_basemap(ax, crs=geodframe.crs, source=cx.providers.Stamen.TonerLite, zoom=12)# Create colorbar as a legend
+    cx.add_basemap(ax, crs=geodframe.crs, source=cx.providers.OpenStreetMap.Mapnik, zoom=12)# Create colorbar as a legend
     sm = plt.cm.ScalarMappable(cmap='Blues_r', norm=plt.Normalize(vmin=0, vmax=selected_data.iloc[0][measure]))
     sm._A = []
     cbar = fig.colorbar(sm, ax = ax)
